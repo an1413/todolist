@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todolist</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="l_wrapper">
+        <h1>To Do List</h1>
+        <form class="input-form">
+          <input maxlength="22" placeholder="할 일을 입력해주세요." type="text" />
+          <button class="add-todo-btn" type="submit">
+            <img src="./assets/addBtn.png" alt="할일추가버튼" />
+          </button>
+        </form>
+        <div class="todo-container">
+          <ul class="todo-lists"></ul>
+        </div>
+      </div>
+      <dialog>
+        <form class="dialog-form" method="dialog">
+          <button>Close</button>
+        </form>
+      </dialog>
+    </main>
+
+    <script src="./todolist.js"></script>
+  </body>
+
+</html>
