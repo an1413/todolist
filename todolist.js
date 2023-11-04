@@ -14,7 +14,7 @@ function loadStorage() {
   if (todos.length > 0) {
     todos.forEach((text, index) => createTodoElement(text, index));
   }
-  // ul 요소의 스타일을 변경합니다. 기존에는 화면에 표시할 수 있는 최대 개수 이상의 할 일이 있을 때 스타일을 조정하여 스크롤이 표시
+  // ul 요소의 스타일을 변경합니다. 화면에 표시할 수 있는 최대 개수 이상의 할 일이 있을 때 스타일을 조정함.
   if (todos.length >= MAX_LIST_COUNT) {
     ul.style.cssText = 'height: unset; min-height: 1000px';
   }
@@ -48,7 +48,6 @@ function createTodoElement(text, index) {
 
   ul.appendChild(li); // 새로운 할 일 항목이 화면에 표시
 }
-
 
 // 사용자가 할 일을 입력하고 추가 버튼을 클릭했을 때 호출되는 함수
 function addTodo() {
@@ -101,30 +100,3 @@ ul.addEventListener('click', (event) => {
     deleteOrEditTodo(index);
   }
 });
-
-// window.addEventListener('load', loadStorage);
-
-//[할 일]
-
-//edit, delete 버튼
-//  edit, delete 모달로 만들기?
-//  edit 방식 고민해보기
-//로컬스토리지 저장 기능
-//listCount 따라서 height랑 min-height 속성 바꿔주기
-
-//로컬스토리지에
-//li span textContent값 저장하기
-//listCount 저장하기
-
-//todo 로컬 스토리지 전
-//* 1. 입력할 수 있는 기능
-//*  1-1 콘텐츠의 글자수 제한
-//*  1-2 둘중 하나라도 입력을 안했을시 alert 을 띄움
-//* 2. 저장을 누를수 있는 기능
-//*   2-1 '현재 입력된 todo가 없습니다' 텍스트 사라짐
-//*   2-2 저장한 값을 화면에 불러옴
-//*   2-3 저장과 동시에 인풋창이 초기화
-//*   2-4 저장을 누른 시점의 날짜 기록
-//*   2-5 삭제버튼을 누르면 다시 '현재 입력된 todo가 없습니다' 텍스트가 돌아와야함
-//* 3. 삭제 기능
-//*   3-1 삭제하면 화면에서 사라짐
